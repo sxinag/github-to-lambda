@@ -9,7 +9,7 @@ provider:
 
 layers:
   hello:
-    path: ./python.zip
+    path: python.zip
     description: serverless-layer
 
 functions:
