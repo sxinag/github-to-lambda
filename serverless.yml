@@ -1,4 +1,4 @@
-service: basic-serverless-lambda-python
+service: basic-serverless-lambda-python-Test
 
 provider:
   name: aws
@@ -13,4 +13,3 @@ functions:
     handler: lambda_function.handler
     description: test-lambda
     timeout: 5
-    memorysize: 128
