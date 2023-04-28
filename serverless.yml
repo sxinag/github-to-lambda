@@ -8,8 +8,9 @@ provider:
 
 
 layers:
-  hello:
-    path: python.zip
+  python.zip:
+    path: /home/sxinaganti/github-to-lambda/ 
+    name: python-test
     description: serverless-layer
 
 functions:
