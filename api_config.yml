@@ -1,0 +1,69 @@
+# Config files provide bucket details and required hard-coded values to process API bid data.
+# source*-> The parameter keeps all source files/bucket names.
+# target* -> The parameter keeps all final file/bucket names.
+# Landing/ -> load Live Listing/source files
+# Work/ -> keep all Transformation/intermediate files 
+# Result/ -> write all final/target files.
+# Log/ -> keep log and error files
+# Code/ -> maintains all coding files(zip files)
+# Archive -> maintains old/unused files.
+
+ovt-vmi:
+ api-bid-data:
+       tokenURL: https://integration1.api.manheim.com/oauth2/token.oauth2
+       bidURL: https://integration1.api.manheim.com/ove/listings/replace_listing_id/bid_history
+       basicAuth: 'Basic NmFtOWEyMmdocDlmenB3ZTlwczUyOWh3OkJOR2RZbXp0TlI='
+       sourceS3Bucket: ovt-vmi-qa
+       sourceBearer: Work/MultiDaySale
+       sourceJson: Work/MultiDaySale
+       sourceCsv: Landing/MultiDaySale
+       targetCsv: Result/MultiDaySale
+       logFolder: Logs/MultiDaySale
+       sourceToken: bid_api_bearer_token
+       sourceListingfl: OVE_LIVE_LISTING_ID
+       targetjsonfl: OVE_LIVE_LISTING_BIDS
+       targetcsvfl: OVE_LIVE_LISTING_BIDS
+       logfl: OVE_LIVE_LISTING
+       email_address: srinivas.inaganti@coxautoinc.com
+       configBucket: code/MultiDaySale
+       configFileKey: api_config.yml
+
+ovt-vmi-dev:
+ api-bid-data:
+       tokenURL: https://integration1.api.manheim.com/oauth2/token.oauth2
+       bidURL: https://integration1.api.manheim.com/ove/listings/replace_listing_id/bid_history
+       basicAuth: 'Basic NmFtOWEyMmdocDlmenB3ZTlwczUyOWh3OkJOR2RZbXp0TlI='
+       sourceS3Bucket: ovt-vmi-dev
+       sourceBearer: Work/MultiDaySale
+       sourceJson: Work/MultiDaySale
+       sourceCsv: Landing/MultiDaySale
+       targetCsv: Result/MultiDaySale
+       logFolder: Logs/MultiDaySale
+       sourceToken: bid_api_bearer_token
+       sourceListingfl: OVE_LIVE_LISTING_ID
+       targetjsonfl: OVE_LIVE_LISTING_BIDS
+       targetcsvfl: OVE_LIVE_LISTING_BIDS
+       logfl: OVE_LIVE_LISTING
+       email_address: srinivas.inaganti@coxautoinc.com
+       configBucket: code/MultiDaySale
+       configFileKey: api_config.yml
+
+ovt-vmi-qa:
+ api-bid-data:
+       tokenURL: https://integration1.api.manheim.com/oauth2/token.oauth2
+       bidURL: https://integration1.api.manheim.com/ove/listings/replace_listing_id/bid_history
+       basicAuth: 'Basic NmFtOWEyMmdocDlmenB3ZTlwczUyOWh3OkJOR2RZbXp0TlI='
+       sourceS3Bucket: ovt-vmi-qa
+       sourceBearer: Work/MultiDaySale
+       sourceJson: Work/MultiDaySale
+       sourceCsv: Landing/MultiDaySale
+       targetCsv: Result/MultiDaySale
+       logFolder: Logs/MultiDaySale
+       sourceToken: bid_api_bearer_token
+       sourceListingfl: OVE_LIVE_LISTING_ID
+       targetjsonfl: OVE_LIVE_LISTING_BIDS
+       targetcsvfl: OVE_LIVE_LISTING_BIDS
+       logfl: OVE_LIVE_LISTING
+       email_address: srinivas.inaganti@coxautoinc.com,sakthiganeshkumar.shenbagam@coxautoinc.com,Aswini.Haridas@coxautoinc.com
+       configBucket: code/MultiDaySale
+       configFileKey: api_config.yml
