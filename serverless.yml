@@ -15,12 +15,12 @@ functions:
     handler: lambda_function.handler
     description: test-lambda
     timeout: 5
-    package:
+#    package:
       # Directories and files to include in the deployed package
       # Explicitly set the package artifact to deploy (overrides native packaging behavior)
 #      artifact: ovt-vmi-dev1/code/MultiDaySale/multidaysale_api.zip
       # Package this function as an individual artifact (default: false)
-      individually: true
+ #     individually: true
     # ARN of Lambda layers to use
     events:
       - s3:
@@ -28,7 +28,7 @@ functions:
           event: s3:ObjectCreated:*
           rules:
             - prefix: Landing/ MultiDaySale/
-            - suffix: .csv
+     #       - suffix: .csv
           # Set to 'true' when using an existing bucket
           # Else the bucket will be automatically created
           existing: true
