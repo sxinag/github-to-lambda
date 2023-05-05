@@ -24,14 +24,14 @@ functions:
     # ARN of Lambda layers to use
     events:
       - s3:
-          bucket: ovt-vmi-dev1
+          bucket: ovt-vmi-dev2
           event: s3:ObjectCreated:*
           rules:
-            - prefix: Landing/ MultiDaySale/
+            - prefix: Landing/MultiDaySale/
      #       - suffix: .csv
           # Set to 'true' when using an existing bucket
           # Else the bucket will be automatically created
-          existing: true
+          existing: false
           # Optional, for forcing deployment of triggers on existing S3 buckets
-          forceDeploy: true
+    #      forceDeploy: true
 
