@@ -15,6 +15,21 @@ functions:
     handler: lambda_function.handler
     description: test-lambda
     timeout: 5
+    environment:
+       sourceS3Bucket: ovt-vmi-qa
+       sourceBearer: Work/MultiDaySale
+       sourceJson: Work/MultiDaySale
+       sourceCsv: Landing/MultiDaySale
+       targetCsv: Result/MultiDaySale
+       logFolder: Logs/MultiDaySale
+       sourceToken: bid_api_bearer_token
+       sourceListingfl: OVE_LIVE_LISTING_ID
+       targetjsonfl: OVE_LIVE_LISTING_BIDS
+       targetcsvfl: OVE_LIVE_LISTING_BIDS
+       logfl: OVE_LIVE_LISTING
+       email_address: srinivas.inaganti@coxautoinc.com
+       configBucket: code/MultiDaySale
+       configFileKey: api_config.yml
 #    package:
       # Directories and files to include in the deployed package
       # Explicitly set the package artifact to deploy (overrides native packaging behavior)
