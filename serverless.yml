@@ -18,7 +18,7 @@ functions:
     package:
       # Directories and files to include in the deployed package
       # Explicitly set the package artifact to deploy (overrides native packaging behavior)
-      artifact: ovt-vmi-dev1/code/MultiDaySale/multidaysale_api.zip
+#      artifact: ovt-vmi-dev1/code/MultiDaySale/multidaysale_api.zip
       # Package this function as an individual artifact (default: false)
       individually: true
     # ARN of Lambda layers to use
